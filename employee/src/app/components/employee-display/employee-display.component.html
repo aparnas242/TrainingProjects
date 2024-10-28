@@ -1,0 +1,22 @@
+<div class="container mt-3">
+    <h2>Employee List</h2><br>
+
+    <div class="row d-flex justify-content-center">
+        @for (emp of employees; track emp.name) {
+        <div class="col-md-4 mb-3">
+            <div class="card" style="width: 100%;">
+                <img class="card-img-top" [src]="emp.photoPath" alt="Card image" style="width: 100%">
+                <div class="card-body" >
+                    <h4 class="card-title" style="margin:0">{{ emp.name }}</h4>
+                    <p class="card-text" style="margin:0"><b>Department</b> {{ emp.department }}.</p>
+                    <p class="card-text" style="margin:0"><b>Gender</b> {{ emp.gender }}.</p>
+                    <p class="card-text" style="margin:0"><b>Date Of birth</b> {{ emp.dateOfBirth | date }}</p>
+                    <p class="card-text" style="margin:0"> <b>Phone Number:</b> {{emp.phoneNumber }}.</p>
+                    <p class="card-text" style="margin:0"><b>Email</b> {{ emp.email }}.</p>
+                    <p class="card-text" style="margin:0"> <B>Active : </B>Active : {{ emp.isActive }}.</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
